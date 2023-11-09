@@ -66,11 +66,6 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
   } = image;
 
   return (
-    <a
-      href={action?.href ?? "#"}
-      aria-label={action?.label}
-      class="relative h-[600px] overflow-y-hidden w-full"
-    >
       <Picture preload={lcp}>
         <Source
           media="(max-width: 767px)"
@@ -93,7 +88,6 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           alt={alt}
         />
       </Picture>
-    </a>
   );
 }
 
