@@ -16,16 +16,6 @@ export interface Banner {
   mobile: ImageWidget;
   /** @description Image's alt text */
   alt: string;
-  action?: {
-    /** @description when user clicks on the image, go to this link */
-    href: string;
-    /** @description Image text title */
-    title: string;
-    /** @description Image text subtitle */
-    subTitle: string;
-    /** @description Button label */
-    label: string;
-  };
 }
 
 export interface Props {
@@ -45,12 +35,6 @@ const DEFAULT_PROPS = {
   images: [
     {
       alt: "/feminino",
-      action: {
-        href: "https://www.deco.cx/",
-        label: "deco.cx",
-        title: "Demo Store",
-        subTitle: "Visit our site and start building now:",
-      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/24278f9e-412d-4a8a-b2d3-57353bb1b368",
       desktop:
@@ -58,12 +42,6 @@ const DEFAULT_PROPS = {
     },
     {
       alt: "/feminino",
-      action: {
-        href: "https://www.deco.cx/",
-        label: "deco.cx",
-        title: "Demo Store",
-        subTitle: "Visit our site and start building now:",
-      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/eeaa624c-a3e1-45e8-a6fe-034233cfbcd0",
       desktop:
@@ -71,12 +49,6 @@ const DEFAULT_PROPS = {
     },
     {
       alt: "/feminino",
-      action: {
-        href: "https://www.deco.cx/",
-        label: "deco.cx",
-        title: "Demo Store",
-        subTitle: "Visit our site and start building now:",
-      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/ae89571c-4a7c-44bf-9aeb-a341fd049d19",
       desktop:
@@ -91,7 +63,6 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     alt,
     mobile,
     desktop,
-    action,
   } = image;
 
   return (
