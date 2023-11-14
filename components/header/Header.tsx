@@ -48,12 +48,15 @@ function Header({
               logo={logo}
             />
           </div>
+          <!-- Google tag (gtag.js) -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-9P2TM04JWL"></script>
           <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
             gtag('config', 'G-9P2TM04JWL', {
-              'server_container_url': 'https://server-side-tagging-orba6vngwq-uc.a.run.app',
             });
             gtag('event', 'test_measurement_protocol', {
-              'server_container_url': 'https://server-side-tagging-orba6vngwq-uc.a.run.app',
               'teste': 'testeDentro do site',
             });
           </script>
