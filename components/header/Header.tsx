@@ -49,17 +49,17 @@ function Header({
             />
           </div>
         </Drawers>
+        <script>
+          gtag('config', 'G-9P2TM04JWL', {
+            'server_container_url': 'https://server-side-tagging-orba6vngwq-uc.a.run.app',
+          });
+          gtag('event', 'test_measurement_protocol', {
+            'server_container_url': 'https://server-side-tagging-orba6vngwq-uc.a.run.app',
+            'teste': 'testeDentro do site',
+          });
+        </script>
       </header>
     </>
-    <script>
-      gtag('config', 'G-9P2TM04JWL', {
-        'server_container_url': 'https://server-side-tagging-orba6vngwq-uc.a.run.app',
-      });
-      gtag('event', 'test_measurement_protocol', {
-        'server_container_url': 'https://server-side-tagging-orba6vngwq-uc.a.run.app',
-        'teste': 'testeDentro do site',
-      });
-    </script>
   );
 }
 
