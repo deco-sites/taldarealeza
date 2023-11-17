@@ -48,9 +48,8 @@ function Header({
               logo={logo}
             />
           </div>
-          <!-- Google tag (gtag.js) -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-9P2TM04JWL"></script>
-          <script>
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-9P2TM04JWL"></Script>
+          <Script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -59,7 +58,7 @@ function Header({
             gtag('event', 'test_measurement_protocol', {
               'teste': 'testeDentro do site',
             });
-          </script>
+          </Script>
         </Drawers>
       </header>
     </>
