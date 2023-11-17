@@ -59,17 +59,6 @@ function Header({
               logo={logo}
             />
           </div>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-9P2TM04JWL"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-9P2TM04JWL', {
-            });
-            gtag('event', 'test_measurement_protocol', {
-              'teste': 'testeDentro do site',
-            });
-          </script>
         </Drawers>
       </header>
     </>
