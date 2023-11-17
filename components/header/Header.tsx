@@ -32,6 +32,16 @@ function Header({
   const platform = usePlatform();
   const items = navItems ?? [];
 
+  let s = document.createAttribute("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=G-9P2TM04JWL"
+
+  let s2 = document.createAttribute("script");
+  s2.innerHTML = "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-9P2TM04JWL', {});gtag('event', 'test_measurement_protocol', {'teste': 'testeDentro do site',});"
+
+  document.head.appendChild(s)
+  document.head.appendChild(s2)
+
   return (
     <>
       <header style={{ height: headerHeight }}>
@@ -48,8 +58,8 @@ function Header({
               logo={logo}
             />
           </div>
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-9P2TM04JWL"></Script>
-          <Script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-9P2TM04JWL"></script>
+          <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -58,7 +68,7 @@ function Header({
             gtag('event', 'test_measurement_protocol', {
               'teste': 'testeDentro do site',
             });
-          </Script>
+          </script>
         </Drawers>
       </header>
     </>
