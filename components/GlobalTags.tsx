@@ -11,6 +11,18 @@ function GlobalTags() {
 
       {/* Web Manifest */}
       <link rel="manifest" href={asset("/site.webmanifest")} />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9P2TM04JWL"></script>
+
+      <script dangerouslySetInnerHTML={{__html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9P2TM04JWL', {
+          'server_container_url': 'https://server-side-tagging-orba6vngwq-uc.a.run.app',
+         });
+      `}}></script>
+
     </Head>
   );
 }

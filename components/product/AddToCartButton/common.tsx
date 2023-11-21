@@ -35,6 +35,10 @@ const useAddToCart = ({
 
       await onAddItem();
 
+      window.gtag('event', 'test_measurement_protocol', {
+        'server_container_url': 'https://server-side-tagging-orba6vngwq-uc.a.run.app',
+       });
+
       sendEvent({
         name: "add_to_cart",
         params: {
